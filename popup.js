@@ -14,9 +14,13 @@ req.send(null);
 function showResult() {
 	if (req.readyState == 4) {
 		var sentences = JSON.parse(req.responseText)
-		for (var i = 0, result;result = sentences.results[i].text; i++) { 
-			var text = document.createTextNode(result)
-			document.body.appendChild(text)
+		var ol = document.createElement("ol");
+		for (var i = 0; i < sentences.results.length ; i++) {
+			var result = sentences.results[i].text
+			var li = document.createElement("li");
+			li.innerText = result
+			ol.appendChild(li)
 		}
+		document.body.appendChild(ol)
 	}
 }
