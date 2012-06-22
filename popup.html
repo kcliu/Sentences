@@ -1,18 +1,22 @@
 <!doctype html>
 <html>
-  <head>
-    <title>Getting Started Extension's Popup</title>
-    <style>
-      body {
-        min-width:357px;
-        overflow-x:hidden;
-      }
+	<head>
+		<title>Getting Started Extension's Popup</title>
+		<style>
+			body {
+				min-width:357px;
+				overflow-x:hidden;
+			}
 
-    </style>
+		</style>
 
-    <!-- JavaScript and HTML must be in separate files for security. -->
-    <script src="popup.js"></script>
-  </head>
-  <body>
-  </body>
+	</head>
+	<body>
+		<div id="lookup-form">
+			<input type="text" id="query-field" size="24" value="">
+			<input type="button" id="button" value="Search">
+		</div>
+		<!-- JavaScript and HTML must be in separate files for security. -->
+		<script src="popup.js"></script>
+	</body>
 </html>
